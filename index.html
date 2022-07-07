@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+</head>
+
+<body>
+    <h1>Math expression</h1>
+    <h3>Average Calculator</h3>
+
+    <form onsubmit="calculate(); return false">
+        <label for="jan">Jan</label>
+        <input type="number" required id="jan">
+        <br>
+        <br>
+        <label for="feb">Feb</label>
+        <input type="number" required id="feb">
+        <br>
+        <br>
+        <label for="march">March</label>
+        <input type="number" required id="march">
+        <br>
+        <br>
+        <label for="april">April</label>
+        <input type="number" required id="april">
+        <br>
+        <br>
+        <label for="may">May</label>
+        <input type="number" required id="may">
+        <br>
+        <br>
+        <label for="june">June</label>
+        <input type="number" required id="june">
+        <br>
+        <br>
+        <label for="july">July</label>
+        <input type="number" required id="july">
+        <br>
+        <br>
+        <label for="aug">Aug</label>
+        <input type="number" required id="aug">
+        <br>
+        <br>
+        <label for="sep">Sep</label>
+        <input type="number" required id="sep">
+        <br>
+        <br>
+        <label for="oct">Oct</label>
+        <input type="number" required id="oct">
+        <br>
+        <br>
+        <button type="submit">Calculate</button>
+        <br>
+        <br>
+        <button type="reset">Reset</button>
+
+    </form>
+
+    <h1 id="result"></h1>
+
+    <script>
+
+        function calculate() {
+            let jan = +document.querySelector("#jan").value;
+            let feb = +document.querySelector("#feb").value;
+            let march = +document.querySelector("#march").value;
+            let april = +document.querySelector("#april").value;
+            let may = +document.querySelector("#may").value;
+            let june = +document.querySelector("#june").value;
+            let july = +document.querySelector("#july").value;
+            let aug = +document.querySelector("#aug").value;
+            let sep = +document.querySelector("#sep").value;
+            let oct = +document.querySelector("#oct").value;
+
+
+            let result = (jan + feb + march + april + may + june + july + aug + sep + oct) / 10;
+
+
+            document.querySelector("#result").innerHTML = "Average sale of jan to oct is " + result;
+
+        }
+    </script>
+
+</body>
+
+</html>
